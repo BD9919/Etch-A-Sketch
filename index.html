@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Etch-A-Sketch</title>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="heading">
+        <h1 class="etch">
+          Etch-A-Sketch x
+          <span class="the-lodge" style="font: 1em grotesk">The Lodge</span>
+        </h1>
+      </div>
+      <div class="drawing">Click to Activate</div>
+      <div class="content">
+        <div class="board"></div>
+        <div class="buttons">
+          <button id="racing" onclick="changeColor('#004225')">
+            Racing Green
+          </button>
+          <button id="paper" onclick="changeColor('#f2eecb')">Paper</button>
+          <button id="eucalyptus" onclick="changeColor('#b9cbb4')">
+            Eucalyptus
+          </button>
+          <button id="spearmint" onclick="changeColor('#21f077')">
+            Spearmint
+          </button>
+          <button id="lodge" onclick="changeColor('rainbow')">
+            Lodge Mode
+          </button>
+          <div class="clean-up">
+            <button id="eraser" onclick="changeColor('white')">Eraser</button>
+            <button id="reset" onclick="reset()">Reset</button>
+          </div>
+        </div>
+        <input
+          type="text"
+          placeholder="Size of Board"
+          value="32"
+          onchange="sizeBoard(this.value)" />
+        <button id="size">Change Size</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
